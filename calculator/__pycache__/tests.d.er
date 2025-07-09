@@ -1,0 +1,22 @@
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/calculator/tests.py 1752097684 1343
+.unittest: Never
+
+.___v_desugar_1: Never
+.Calculator: Never
+.TestCalculator: ClassType
+.TestCalculator <: Never
+.TestCalculator.setUp: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_addition: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_subtraction: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_multiplication: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_division: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_nested_expression: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_complex_expression: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_empty_expression: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_invalid_operator: (self: tests.TestCalculator) -> NoneType
+.TestCalculator.test_not_enough_operands: (self: tests.TestCalculator) -> NoneType
+
+
+
+
+

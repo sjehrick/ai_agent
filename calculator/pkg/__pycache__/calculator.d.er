@@ -1,0 +1,9 @@
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/calculator/pkg/calculator.py 1752097769 1738
+.Calculator: ClassType
+.Calculator.precedence: Never
+.Calculator.operators: Never
+.Calculator.__call__: () -> calculator.Calculator
+.Calculator.evaluate: (self: calculator.Calculator, expression: Never) -> Never
+.Calculator._evaluate_infix: (self: calculator.Calculator, tokens: global::Iterable(Never)) -> Never
+.Calculator._apply_operator: (self: calculator.Calculator, operators: global::GenericList, values: global::GenericList) -> Never
+
