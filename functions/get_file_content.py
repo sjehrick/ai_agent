@@ -1,5 +1,6 @@
 import os
 
+
 def get_file_content(working_directory, file_path):
     abs_working_dir = os.path.abspath(working_directory)
     target_dir = os.path.abspath(os.path.join(working_directory, file_path))
@@ -8,4 +9,10 @@ def get_file_content(working_directory, file_path):
     if not os.path.isfile(target_dir):
     return f'Error: File not found or is not a regular file: "{file_path}"'
     try:
-    
+        MAX_CHARS = 10000
+        with open(target_dir, "r") as f:
+            file_content_string = f.read(MAX_CHARS)
+        if len(file_content_string) == MAX_CHARS:
+            file_content_string += f'...File "{target_dir}" truncated at 10000 characters'
+    except Exception as e:
+        return f'Error: error retrieving file content: {e}'
