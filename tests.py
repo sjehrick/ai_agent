@@ -1,14 +1,14 @@
-from functions.get_files_info import get_files_info
+from functions.get_file_content import get_file_content
 
-print("Result for current directory:")
-print(get_files_info("calculator", "."))
+print("Result for lorem.txt:")
+print(get_file_content("calculator", "lorem.txt"))
 
-print("\nResult for 'pkg' directory:")
-print(get_files_info("calculator", "pkg"))
 
-print("\nResult for '/bin' directory:")
-print(get_files_info("calculator", "/bin"))
 
-print("\nResult for '../' directory:")
-print(get_files_info("calculator", "../"))
+
+
+
+
+
+
 
