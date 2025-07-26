@@ -1,1 +1,4 @@
-##[pylyzer] succeed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/get_file_content.py 1753238158 820
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/get_file_content.py 1753392654 891
+.os: Never
+
+.get_file_content: (working_directory: Obj, file_path: Obj) -> Never
