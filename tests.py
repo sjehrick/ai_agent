@@ -1,8 +1,11 @@
 from functions.get_file_content import get_file_content
 
-print("Result for lorem.txt:")
-print(get_file_content("calculator", "lorem.txt"))
+def main():
+    class TestFileContent():
+        self.file_content = get_file_content(working_directory, file_path)
+        def _apply_operator(self, operators, values):
 
+        
 
 
 
