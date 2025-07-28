@@ -1,11 +1,7 @@
-##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1752962960 385
-.___v_desugar_1 = pyimport "get_files_info"
-.get_files_info = pyimport "get_files_info"
-.get_files_info: Never
-
-
-
-
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1753635408 299
+.___v_desugar_1 = pyimport "get_file_content"
+.get_file_content = pyimport "get_file_content"
+.get_file_content: Never
 
 
 
