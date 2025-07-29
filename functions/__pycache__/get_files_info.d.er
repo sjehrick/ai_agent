@@ -1,5 +1,5 @@
-##[pylyzer] succeed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/get_files_info.py 1752962870 993
-os: Never
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/get_files_info.py 1752962870 993
+.os: Never
 
 .get_files_info: (working_directory: Obj, directory: Obj := Obj) -> Never
 
