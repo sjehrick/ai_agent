@@ -1,8 +1,7 @@
-##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1753635408 299
-.___v_desugar_1 = pyimport "get_file_content"
-.get_file_content = pyimport "get_file_content"
-.get_file_content: Never
-
+##[pylyzer] succeed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1754179538 287
+.___v_desugar_1 = pyimport "write_file"
+.write_file = pyimport "write_file"
+.write_file: (working_directory: Obj, file_path: global::PathLike, content: Obj) -> Never
 
 
 
