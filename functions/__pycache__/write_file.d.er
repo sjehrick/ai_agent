@@ -1,4 +1,5 @@
-##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/write_file.py 1753981007 683
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/write_file.py 1754265547 738
 .os: Never
 
-.write_file: (working_directory: Obj, file_path: global::PathLike, content: Obj) -> Never
+.write_file: (working_directory: Obj, file_path: Obj, content: Obj) -> Never
+bj) -> Never
