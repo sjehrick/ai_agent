@@ -21,5 +21,19 @@ def run_python_file(working_directory, file_path, args=[]):
         )
     except subprocess.CalledProcessError as e:
         return (
-            f"Error: Command failed with exit code {e.returncode}, Stderr: {e.stderr}"
+            f"Error: executing Python file: {e} \nCommand failed with exit code {e.returncode}, \nStderr: {e.stderr}"
         )
+    
+    output = f"STDOUT: {result.stdout} \nSTDERR: {result.stderr}"
+
+    if not result:
+        return (
+            "No output produced"
+        )
+
+    if result.returncode != 0:
+        return (
+            output + f"\nProcess exited with code {result.returncode}"
+        )
+
+    return output
