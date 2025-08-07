@@ -1,0 +1,6 @@
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/functions/run_python.py 1754491163 1258
+.os: Never
+
+.subprocess: Never
+
+.run_python_file: |B <: Bool, Type_22208 <: Structural({.endswith = (self: Obj, Type_22248) -> B}), Type_22248 :> {".py"}|(working_directory: Obj, file_path: Type_22208, args: Obj := global::List!(Never, 0)) -> Str
