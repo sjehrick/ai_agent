@@ -1,7 +1,13 @@
-##[pylyzer] succeed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1754179538 287
-.___v_desugar_1 = pyimport "write_file"
-.write_file = pyimport "write_file"
-.write_file: (working_directory: Obj, file_path: global::PathLike, content: Obj) -> Never
+##[pylyzer] failed /home/arboreal/workspace/github.com/sjehrick/ai_agent/tests.py 1754601655 316
+.___v_desugar_1 = pyimport "run_python"
+.run_python = pyimport "run_python"
+.run_python_file: Never
+
+
+
+
+
+ory: Obj, file_path: global::PathLike, content: Obj) -> Never
 
 
 
