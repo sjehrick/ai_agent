@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 
 from prompts import system_prompt
 from call_function import schema_get_files_info
+from call_function import schema_get_file_content
+from call_function import schema_run_python_file
+from call_function import schema_write_file
 from call_function import available_functions
 
 def main():
