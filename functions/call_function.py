@@ -20,3 +20,15 @@ def call_function(function_call_part, verbose=False):
             **{"working_directory": "./calculator", "file_path": "x", "content": "x"}
         ),
     }
+
+    for function in function_dict[0]:
+        if not function_call_part.name:
+            return types.Content(
+                role="tool",
+                parts=[
+                    types.Part.from_function_response(
+                        name=function_name,
+                        response={"error": f"Unknown function: {function_name}"},
+                    )
+                ],
+            )
