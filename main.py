@@ -10,6 +10,7 @@ from call_function import schema_get_file_content
 from call_function import schema_run_python_file
 from call_function import schema_write_file
 from call_function import available_functions
+from functions.call_function import call_function
 
 def main():
     load_dotenv()
@@ -47,15 +48,27 @@ def generate_content(client, messages, verbose):
     if verbose:
         print("Prompt tokens:", response.usage_metadata.prompt_token_count)
         print("Response tokens:", response.usage_metadata.candidates_token_count)
+    
+    function_call_results = []
 
     if response.function_calls:
         for function_call in response.function_calls:
-            print(f"Calling function: {function_call.name}({function_call.args})")
+            function_call_result = call_function(function_call, verbose)
+            function_call_results.append(function_call_result)
+
+            if function_call_result.parts[0].function_response.response:
+                if verbose:
+                    print(f"-> {function_call_result.parts[0].function_response.response}")
+            else:
+                raise Exception("Error: fatal error. no response from function call") 
 
     else:
         print("No function call found in the response.")
         return response.text
+    
+    return function_call_results
 
 
 if __name__ == "__main__":
     main()
+
