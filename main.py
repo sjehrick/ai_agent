@@ -35,11 +35,23 @@ def main():
     messages = [
         types.Content(role="user", parts=[types.Part(text=user_prompt)]),
     ]
-
-    response = generate_content(client, messages, verbose)
     
-    for candidate in response.candidates:
-        messages.append(response.candidates.content)
+    counter = 0
+
+    while counter < 20:
+        try:
+            response = generate_content(client, messages, verbose)
+    
+            for candidate in response.candidates:
+                messages.append(response.candidates.content)
+
+            if response.text:
+                    return response.text
+            
+            counter += 1
+
+        except Exception as e:
+            return f"Error: An error occured during the content generation loop - {e}"
 
 def generate_content(client, messages, verbose):
     response = client.models.generate_content(
@@ -56,7 +68,7 @@ def generate_content(client, messages, verbose):
     if response.function_calls:
         for function_call in response.function_calls:
             function_call_result = call_function(function_call, verbose)
-            #add the types.Content function here to append the function response to messages
+            messages.append(types.Content(role="user", parts=[types.Part(text=function_call_result)]))
             function_call_results.append(function_call_result)
 
             if function_call_result.parts[0].function_response.response:
