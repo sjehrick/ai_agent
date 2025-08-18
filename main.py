@@ -36,8 +36,10 @@ def main():
         types.Content(role="user", parts=[types.Part(text=user_prompt)]),
     ]
 
-    generate_content(client, messages, verbose)
-
+    response = generate_content(client, messages, verbose)
+    
+    for candidate in response.candidates:
+        messages.append(response.candidates.content)
 
 def generate_content(client, messages, verbose):
     response = client.models.generate_content(
@@ -54,6 +56,7 @@ def generate_content(client, messages, verbose):
     if response.function_calls:
         for function_call in response.function_calls:
             function_call_result = call_function(function_call, verbose)
+            #add the types.Content function here to append the function response to messages
             function_call_results.append(function_call_result)
 
             if function_call_result.parts[0].function_response.response:
